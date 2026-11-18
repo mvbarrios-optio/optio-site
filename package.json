@@ -1,0 +1,15 @@
+{
+  "name": "optio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Custom JS and CSS for optio.io (Webflow). Built files are served from jsDelivr at a pinned version.",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.js\" \"css/**/*.css\"",
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "prettier": "3.3.3"
+  }
+}
