@@ -56,6 +56,10 @@
 [data-w-card] {
   pointer-events: none;
 }
+/* the script fills the thumb strip after load; reserve one row so nothing below jumps */
+[data-w-track] {
+  min-height: 4.2188rem;
+}
 @media (max-width: 47.9375rem) {
   [data-w-cards] {
     display: grid;
@@ -65,6 +69,8 @@
     margin: 1.875rem auto 0;
     padding: 0 1.25rem;
     box-sizing: border-box;
+    /* the script adds the cards after load; reserve their two visible rows (3 per row, 16:9) so the gallery below doesn't jump */
+    min-height: calc((min(27.5rem, 100vw) - 4rem) * 0.375 + 0.75rem);
   }
   [data-w-card] {
     aspect-ratio: 16/9;
@@ -89,5 +95,8 @@
   }
   [data-w-thumb] {
     width: 6rem;
+  }
+  [data-w-track] {
+    min-height: 3.375rem;
   }
 }
