@@ -20,9 +20,9 @@
   }
   var imgs = $$("[data-w-view] img");
   if (!imgs.length) return;
-  /* the gallery images are the one source of slides, hero cards and thumbs */
+  /* the gallery images are the one source of slides; hero cards and thumbs use the small photo in data-sm when there is one, like the current site */
   var SL = imgs.map(function (im) {
-    return { sm: im.getAttribute("src"), alt: im.getAttribute("alt") || "" };
+    return { sm: im.getAttribute("data-sm") || im.getAttribute("src"), alt: im.getAttribute("alt") || "" };
   });
   var N = SL.length;
 
