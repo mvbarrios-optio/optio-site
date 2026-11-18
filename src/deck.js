@@ -24,15 +24,6 @@
   var cur = 0,
     hov = false,
     th = [];
-  /* thumbnails: the 480px files from the CMS "Thumbs" field (data-d-thumbs); falls back to the slide itself */
-  var TH = (view.getAttribute("data-d-thumbs") || "")
-    .split(",")
-    .map(function (s) {
-      return s.trim();
-    });
-  function thumb(im, i) {
-    return TH[i] || im.getAttribute("src");
-  }
   view.classList.add("is-js");
   view.setAttribute("tabindex", "0");
   view.setAttribute("role", "region");
@@ -47,7 +38,7 @@
       b.type = "button";
       b.setAttribute("data-d-thumb", "1");
       b.setAttribute("aria-label", "Slide " + (i + 1));
-      b.style.backgroundImage = 'url("' + thumb(im, i) + '")';
+      b.style.backgroundImage = 'url("' + im.getAttribute("src") + '")';
       b.addEventListener("click", function () {
         go(i);
       });

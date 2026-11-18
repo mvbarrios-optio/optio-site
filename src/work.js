@@ -20,12 +20,9 @@
   }
   var imgs = $$("[data-w-view] img");
   if (!imgs.length) return;
-  /* the gallery images are the one source of slides; hero cards and thumbs use each image's 480px data-thumb */
-  function small(im) {
-    return im.getAttribute("data-thumb") || im.getAttribute("src");
-  }
+  /* the gallery images are the one source of slides, hero cards and thumbs */
   var SL = imgs.map(function (im) {
-    return { sm: small(im), alt: im.getAttribute("alt") || "" };
+    return { sm: im.getAttribute("src"), alt: im.getAttribute("alt") || "" };
   });
   var N = SL.length;
 
