@@ -10,6 +10,10 @@
   opacity: 1;
   transform: none;
 }
+/* the 15 slides are stacked, so lazy loading alone would fetch them all at once; only the first loads until the script needs the others */
+[data-d-view] .w-dyn-item:not(:first-child) img:not(.is-load) {
+  display: none;
+}
 [data-d-strip] {
   -webkit-mask-image: linear-gradient(
     90deg,

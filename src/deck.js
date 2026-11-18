@@ -38,15 +38,27 @@
       b.type = "button";
       b.setAttribute("data-d-thumb", "1");
       b.setAttribute("aria-label", "Slide " + (i + 1));
-      b.style.backgroundImage = 'url("' + im.getAttribute("src") + '")';
       b.addEventListener("click", function () {
         go(i);
       });
       track.appendChild(b);
       th.push(b);
     });
+  /* slides stay display:none (so the lazy load doesn't fetch all 15 at once) until they are about to be shown; once shown they stay */
   function load(im) {
-    if (im && im.loading === "lazy") im.loading = "eager";
+    if (!im) return;
+    im.classList.add("is-load");
+    if (im.loading === "lazy") im.loading = "eager";
+  }
+  /* thumbs get their image only when they come into view in the strip */
+  function thumbs() {
+    if (!track || !th[0]) return;
+    var tw = th[0].offsetWidth || 120,
+      tg = parseFloat(getComputedStyle(track).columnGap) || 10,
+      k = Math.ceil((track.parentNode.clientWidth || W.innerWidth) / (tw + tg) / 2) + 1;
+    for (var i = Math.max(0, cur - k); i <= Math.min(N - 1, cur + k); i++)
+      if (!th[i].style.backgroundImage)
+        th[i].style.backgroundImage = 'url("' + imgs[i].getAttribute("src") + '")';
   }
   function paint() {
     imgs.forEach(function (im, i) {
@@ -57,7 +69,7 @@
     });
     load(imgs[cur]);
     load(imgs[(cur + 1) % N]);
-    load(imgs[(cur - 1 + N) % N]);
+    if (cur > 0) load(imgs[cur - 1]);
     th.forEach(function (b, i) {
       var on = i === cur;
       b.classList.toggle("is-on", on);
@@ -74,6 +86,7 @@
       track.style.transform =
         "translateX(" + -(cur * (tw + tg) + tw / 2) + "px)";
     }
+    thumbs();
     if (bar) bar.style.width = (((cur + 1) / N) * 100).toFixed(2) + "%";
     if (count) count.textContent = cur + 1 + " / " + N;
   }
