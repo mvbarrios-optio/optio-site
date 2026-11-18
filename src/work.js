@@ -328,17 +328,23 @@
           track.appendChild(b);
           th.push(b);
         });
+      /* slides stay display:none (so the lazy load doesn't fetch them) until they are about to be shown; once shown they stay */
+      function show(im) {
+        if (!im) return;
+        im.classList.add("is-load");
+        if (im.loading === "lazy") im.loading = "eager";
+      }
       function paint() {
         imgs.forEach(function (im, i) {
           var on = i === cur;
           im.classList.toggle("is-on", on);
           if (on) {
             im.removeAttribute("aria-hidden");
-            if (im.loading === "lazy") im.loading = "eager";
+            show(im);
           } else im.setAttribute("aria-hidden", "true");
         });
-        var nx = imgs[(cur + 1) % N];
-        if (nx && nx.loading === "lazy") nx.loading = "eager";
+        /* get the next slide ready too, so the crossfade never waits for a download */
+        show(imgs[(cur + 1) % N]);
         th.forEach(function (b, i) {
           var on = i === cur;
           b.classList.toggle("is-on", on);

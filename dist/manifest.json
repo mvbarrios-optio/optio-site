@@ -1,56 +1,56 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repo": "mvbarrios-optio/optio-site",
   "hosted": {
     "belt": {
       "bytes": 575,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/belt.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/belt.min.js",
       "integrity": "sha384-W4RjMjZwbmhHSx9vd2QK/voDAyH2LYMfi9efnO0EVVSoITOTnZZ4IEbo1zXoLXZH"
     },
     "call": {
       "bytes": 6048,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/call.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/call.min.js",
       "integrity": "sha384-v9pmGJvBNFdJDfh0pa/Xkfzy8M8hfJrbMp5lQQq6ipfW2f9yC1hmSw2mCujM8vCJ"
     },
     "deck": {
       "bytes": 2677,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/deck.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/deck.min.js",
       "integrity": "sha384-u4bnwShoksgIXmRypQw6BkHFp5zCrrz0t6J0TFZXof27NoslBrIijTbvEIqmuTSH"
     },
     "faq": {
       "bytes": 896,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/faq.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/faq.min.js",
       "integrity": "sha384-YCDNFoabbpZxa3VrpCVh2dtBwLrP9HIBZmorf6muPHBpru0ZoRsZpDz1uUfLCsVq"
     },
     "free": {
       "bytes": 2682,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/free.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/free.min.js",
       "integrity": "sha384-xprLQa8xmDMFui//JXHonxVEyYnVpfVycQz7oRrKZWu5kJOns2J9/Kx2ZA21yRPU"
     },
     "home": {
       "bytes": 3357,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/home.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/home.min.js",
       "integrity": "sha384-oJa9YtE/uj+xHQ0k5r87IQFh1ZdQ6mawsjKdnhE4gg6YFaheYcp7dOpoKQM1fCU+"
     },
     "map": {
       "bytes": 2180,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/map.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/map.min.js",
       "integrity": "sha384-Uo1638uwFpejNnJXCOxARHvvbH3qTsWUA2dopfDoNUycgnGxBA1EyTQYbTyQCxrU"
     },
     "reviews": {
       "bytes": 1830,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/reviews.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/reviews.min.js",
       "integrity": "sha384-IM5wjgu1j7yXSlsBz8cwDSLHtAgmxfw2HBFTa1T8m/Mqwzs0MCn6S1EyLPZXceMZ"
     },
     "scorecard": {
       "bytes": 11381,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/scorecard.min.js",
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/scorecard.min.js",
       "integrity": "sha384-EqQ3CUWP02ObyF+0O4yt5xI5vvRjAI/IdJ89AU0uK6qCrGxMtf0F/+96tzSf3S7f"
     },
     "work": {
-      "bytes": 7513,
-      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.3/dist/work.min.js",
-      "integrity": "sha384-I3FH7lCfhZ1z3XRmsT0Bd0dONGty1i0vCbYah7/Q1TQ2OyRJwqxFwgdim6SLzw7Q"
+      "bytes": 7518,
+      "url": "https://cdn.jsdelivr.net/gh/mvbarrios-optio/optio-site@1.0.4/dist/work.min.js",
+      "integrity": "sha384-5Yb6ljPkyYhjlTtMMrcbyaZkn21hNGr0/q/OY4ueHT94odZyLg1F1D0geA78k7wZ"
     }
   },
   "inline": {
